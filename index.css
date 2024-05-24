@@ -138,7 +138,7 @@ section{
 }
 
 .home .slide{
-    min-height: 100vh;
+    min-height: 80vh;
     background-size: cover !important;
     background-position: center ;
     display: flex;
@@ -243,7 +243,8 @@ section{
 }
 
 .menu .box-container .box .image img{
-    object-fit: cover;
+    max-width: 40vh;
+    max-height: 40vh;
 }
 
 .menu .box-container .box .content{

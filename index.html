@@ -10,7 +10,16 @@
     <meta property="og:title" content="Rare Techiez">
     <meta property="og:url" content="https://raretechiez.com">
     <meta property="og:site_name" content="raretechiez">
-    
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "cumqZs6AvuThUOrsu",
+      });
+   })();
+</script>
     <title>Rare Techiez</title>
     <!-- font awesome -->
     <link
@@ -114,6 +123,18 @@
 
 
           </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="image">
+          <img src="images/why.png" alt="" />
+        </div>
+
+        <div class="content">
+          <h3>why choose <span style="color: rgb(3, 97, 3); font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">rare techiez</span></h3>
+          <p>
+            At Rare, we are dedicated to providing the best possible IT training for our students. With a team of experienced and knowledgeable instructors, a wide range of courses to choose from, and flexible course formats, we are committed to helping our students achieve their career goals. We also offer a variety of support services, including career guidance and mentorship programs, to ensure that our students have the tools they need to succeed beyond the classroom. With a strong reputation in the industry and a track record of success, we are confident that choosing [company name] for your IT training needs is the right choice </p>
+         
         </div>
       </div>
     </section>
@@ -333,32 +354,33 @@
     <section class="order" id="contact">
       <h1 class="heading">Contact us</h1>
 
-      <form action="">
+      <form action="" onsubmit="sendMail(); reset(); return false;">
         <div class="box-container">
           <div class="box">
             <div class="inputBox">
               <span>full name</span>
-              <input type="text" placeholder="enter your name" />
+              <input type="text" id="name" placeholder="enter your name"  required/>
             </div>
 
             <div class="inputBox">
               <span>Email</span>
-              <input type="email" placeholder="Enter Email" />
+              <input type="email" id="email" placeholder="Enter Email" required/>
             </div>
 
             <div class="inputBox">
               <span>Subject</span>
-              <input type="text" placeholder="Enter Subject" />
+              <input type="text" id="subject" placeholder="Enter Subject" />
             </div>
 
             <div class="inputBox ">
               <span>phone number</span>
-              <input type="number" placeholder="enter your phone number" />
+              <input type="number" id="number" placeholder="enter your phone number" required/>
             </div>
 
             <div class="inputBox">
               <span>Message</span>
               <textarea
+                id="message"
                 name=""
                 placeholder="enter your Message"
                 cols="30"
@@ -368,7 +390,7 @@
           </div>
 
         </div>
-        <input type="submit" value="submit"   class="btn" onclick="submited()" />
+        <input type="submit" value="submit"   class="btn" onclick="sendMail()" />
       </form>
       
     </section>
